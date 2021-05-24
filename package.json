@@ -7,5 +7,6 @@
     "dependencies": {
         "express": "latest",
         "request": "latest"
-    }
+    },
+    "devDependencies": {}
 }
