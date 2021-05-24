@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
 //API route
 app.get('/api/search', (req, res) => {
     // only allowed for essentia.js demos to use this fork of the project
-    res.set('Access-Control-Allow-Origin', 'http://mtg.upf.edu/');
+    // http://mtg.upf.edu/
+    res.set('Access-Control-Allow-Origin', '*');
     scraper.youtube(req.query.q, req.query.key, req.query.pageToken)
         .then(x => res.json(x))
         .catch(e => res.send(e));
